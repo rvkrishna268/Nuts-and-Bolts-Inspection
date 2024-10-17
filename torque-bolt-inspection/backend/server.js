@@ -8,7 +8,7 @@ const fs = require("fs");
 const app = express();
 app.use(cors());
 app.use(express.json());
-
+app.use(express.static('.'));
 // Setting up storage for image uploads
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
